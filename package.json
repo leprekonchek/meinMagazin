@@ -1,0 +1,15 @@
+{
+  "name": "meinemagazin",
+  "version": "1.0.0",
+  "description": "this is my second nit project and i hope i will end it up just before the deadlines will burn my ass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(git: //github.com/leprekonchek/meineMagazin/)"
+  },
+  "author": "Sima Lopukhina",
+  "license": "ISC"
+}
