@@ -2,7 +2,7 @@
   "name": "meinemagazin",
   "version": "1.0.0",
   "description": "this is my second nit project and i hope i will end it up just before the deadlines will burn my ass",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -14,6 +14,9 @@
   "author": "Sima Lopukhina",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   }
