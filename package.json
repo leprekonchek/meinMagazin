@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "this is my second nit project and i hope i will end it up just before the deadlines will burn my ass",
   "main": "src/index.js",
+  "watch": {
+    "test": "{src,test}/*.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,17 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "babel-loader": "^8.0.4",
+    "bootstrap": "^4.1.3",
+    "css-loader": "^1.0.1",
+    "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "npm-watch": "^0.4.0"
   }
 }

@@ -1,104 +1,84 @@
-$color: beige;
-$footer-height: 50px;
-$dis: false;
-$font: SegoeUI, sans-serif;
-
 body {
-  margin-bottom: $footer-height;
-}
-.logo{
+  margin-bottom: 50px; }
+
+.logo {
   width: 55px;
   height: 55px;
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 .nazva {
-  font: 2.5rem $font;
-  color: $color;
-}
+  font: 2.5rem SegoeUI, sans-serif;
+  color: beige; }
 
 img {
-  object-fit: contain;
-}
+  object-fit: contain; }
 
 .jumbotron {
   background-image: url(https://hdqwalls.com/wallpapers/abstract-vector-graphic-design-hf.jpg);
-  background-size: cover;
-}
+  background-size: cover; }
 
 .imagg {
   height: 150px;
-  min-height: 90px;
-}
+  min-height: 90px; }
 
 .name {
   margin: 10px auto 10px;
   max-width: fit-content;
   white-space: nowrap;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .discount {
-  $dis: true;
   color: slategray;
-  text-decoration: line-through firebrick;
-}
+  text-decoration: line-through firebrick; }
 
 .price_discount {
   color: firebrick;
   font-size: 1.1rem;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .buy {
   background-color: transparent;
-  color: slategray;
-}
+  color: slategray; }
 
 .buy:hover {
   background-color: coral;
-  color: ghostwhite;
-}
+  color: ghostwhite; }
 
 .about {
   background-color: transparent;
-  color: slategray;
-}
+  color: slategray; }
 
 .about:hover {
   background-color: plum;
-  color: ghostwhite;
-}
+  color: ghostwhite; }
 
 .product-grid {
-  padding: 20px;
-}
+  padding: 20px; }
 
 .prod {
   padding: 10px;
-  transition: ease-out transform .2s;
-}
+  transition: ease-out transform .2s; }
 
 .prod:hover {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), -2px 0px 3px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
-}
-.dropdown-item{
-  padding: 2px 5px;
-}
-.cart{
+  transform: scale(1.05); }
+
+.dropdown-item {
+  padding: 2px 5px; }
+
+.cart {
   width: 25px;
   height: 25px;
-  float: right;
-}
+  float: right; }
+
 .footer {
   bottom: 0;
   width: 100%;
-  height: $footer-height;
+  height: 50px;
   background-color: plum;
-  padding: 15px;
-}
-.modImg{
+  padding: 15px; }
+
+.modImg {
   height: 300px;
-  min-height: 300px;
-}
+  min-height: 300px; }
+
