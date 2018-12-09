@@ -1,5 +1,6 @@
 import './scss/main.scss';
 import $ from 'jquery';
+import './cart';
 
 window.jQuery = $;
 window.$ = $;
@@ -7,14 +8,15 @@ window.$ = $;
 let _htmlIt = require('./modules/product-html');
 let _mod = require('./module');
 let _text = require('./whoWeAre');
-let _emptyCart = require('./formCartModal');
 
 //empty functions
 function _emptyModalData() {
     $('.modal-title').empty();
+    $('#myCont').empty();
+    $('.modal-image').empty();
     $('.modal-price').empty();
     $('.modal-description').empty();
-    $('.modal-body').empty();
+    $('.modal-footer').empty();
 };
 
 function _emptyPage() {
@@ -61,21 +63,8 @@ $(document).on('click', '.about', function () {
 //when we click on categories
 $(document).on('click', '.dropdown-item', function () {
     let data_id = $(this).attr('id');
-    $.get('http://nit.tron.net.ua/api/product/list/category/' + data_id, json => {
+    $.get('https://nit.tron.net.ua/api/product/list/category/' + data_id, json => {
         _emptyPage();
         json.forEach(product => $('.product-grid').append(_htmlIt._makeProduct(product)));
     });
-});
-
-//when we click on button 'buy'
-$(document).on('click', '.buy', function () {
-   let product_id = $(this).attr('id');
-   console.log(product_id);
-});
-
-//when we click on cart
-$(document).on('click', '.cart', function(){
-    console.log('clicked');
-    _emptyModalData();
-    _emptyCart();
 });

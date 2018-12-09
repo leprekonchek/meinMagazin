@@ -29,6 +29,7 @@ img {
 .imagg {
   height: 150px;
   min-height: 90px;
+  cursor: pointer;
 }
 
 .name {
@@ -36,6 +37,7 @@ img {
   max-width: fit-content;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .discount {
@@ -100,5 +102,4 @@ img {
 }
 .modImg{
   height: 300px;
-  min-height: 300px;
 }

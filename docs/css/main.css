@@ -19,13 +19,15 @@ img {
 
 .imagg {
   height: 150px;
-  min-height: 90px; }
+  min-height: 90px;
+  cursor: pointer; }
 
 .name {
   margin: 10px auto 10px;
   max-width: fit-content;
   white-space: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
 
 .discount {
   color: slategray;
@@ -79,6 +81,5 @@ img {
   padding: 15px; }
 
 .modImg {
-  height: 300px;
-  min-height: 300px; }
+  height: 300px; }
 

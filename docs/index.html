@@ -31,7 +31,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="#"><img src="../files/cart2.png" class="cart float-right"></a>
+            <a href="#" class="mycart" data-toggle="modal" data-target="#myModal"><img src="../files/cart2.png" class="cart float-right"></a>
         </div>
     </nav>
     <div class="jumbotron">
@@ -45,7 +45,7 @@
 
 <!-- Modal -->
 <div class="modal" id="myModal">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
             <!-- Modal Header -->
@@ -55,16 +55,15 @@
             </div>
 
             <!-- Modal body -->
-            <div class="modal-body">
-                <div class="modal-image modImg"></div>
-                <div class="modal-description"></div>
-                <div class="modal-price float-right"></div>
+            <div class="modal-body container row">
+                <div class="modal-image col-md-6 col-sm-12"></div>
+                <div class="modal-description col-md-6 col-sm-12"></div>
+                <div class="modal-price col-md-6 col-sm-12 order-1"></div>
+                <div class="container" id="myCont"></div>
             </div>
 
             <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
+            <div class="modal-footer"></div>
 
         </div>
     </div>
