@@ -65,13 +65,13 @@ img {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), -2px 0px 3px rgba(0, 0, 0, 0.1);
   transform: scale(1.05); }
 
-.dropdown-item {
-  padding: 2px 5px; }
-
 .cart {
   width: 25px;
   height: 25px;
   float: right; }
+
+.itemsInCart {
+  color: white; }
 
 .footer {
   bottom: 0;
@@ -82,4 +82,42 @@ img {
 
 .modImg {
   height: 300px; }
+
+.cartImage {
+  height: 100px; }
+
+.closeIt {
+  background-color: maroon;
+  color: ghostwhite;
+  margin-left: 15px; }
+
+.closeIt:hover {
+  background-color: firebrick; }
+
+.plus-minus {
+  background-color: transparent;
+  margin: 0 5px; }
+
+.plus-minus:hover {
+  background-color: gold;
+  color: blanchedalmond; }
+
+.row {
+  margin: 5px 0; }
+
+.check {
+  background-color: transparent;
+  color: slategray; }
+
+.check:hover {
+  background-color: coral;
+  color: ghostwhite; }
+
+.back-btn {
+  background-color: transparent;
+  color: slategray; }
+
+.back-btn:hover {
+  background-color: plum;
+  color: ghostwhite; }
 

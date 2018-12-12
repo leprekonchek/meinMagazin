@@ -14,7 +14,7 @@
 <header>
     <nav class="navbar bg-dark navbar-expand-md navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="home" href="#"><img class="logo" src="../files/logo2.png"></a>
+            <a class="home" href="#"><img class="logo" alt="logo" src="../files/logo2.png"></a>
             <div class="mr-auto">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -31,7 +31,11 @@
                     </li>
                 </ul>
             </div>
-            <a href="#" class="mycart" data-toggle="modal" data-target="#myModal"><img src="../files/cart2.png" class="cart float-right"></a>
+            <a href="#" class="mycart" data-toggle="modal" data-target="#myModal"><img src="../files/cart2.png"
+                                                                                       alt="cart"
+                                                                                       class="cart">
+            <span class="itemsInCart"></span>
+            </a>
         </div>
     </nav>
     <div class="jumbotron">
@@ -40,7 +44,7 @@
 
 </header>
 <div class="container" id="mainPage">
-<div class="row product-grid"></div>
+    <div class="row product-grid"></div>
 </div>
 
 <!-- Modal -->
@@ -55,12 +59,7 @@
             </div>
 
             <!-- Modal body -->
-            <div class="modal-body container row">
-                <div class="modal-image col-md-6 col-sm-12"></div>
-                <div class="modal-description col-md-6 col-sm-12"></div>
-                <div class="modal-price col-md-6 col-sm-12 order-1"></div>
-                <div class="container" id="myCont"></div>
-            </div>
+            <div class="modal-body container"></div>
 
             <!-- Modal footer -->
             <div class="modal-footer"></div>
@@ -68,6 +67,10 @@
         </div>
     </div>
 </div>
-<footer class="footer text-center"> © 2018 Developed by: Lopukhina Serafima</footer>
+
+<footer class="footer text-center">
+    © 2018 Developed by: Lopukhina Serafima
+    <a href="https://www.instagram.com/sima.ufo/">(my insta)</a>
+</footer>
 </body>
 </html>
