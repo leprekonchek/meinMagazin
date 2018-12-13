@@ -8,6 +8,7 @@ function initCart() {
     if (localStorage.getItem("cart") != null) {
         whatToOrder = JSON.parse(localStorage.getItem("cart"));
     }
+    countProducts();
 }
 
 function countProducts() {
@@ -24,7 +25,6 @@ function countTotalSum() {
     for (let i in whatToOrder) {
         $totalPrice += Number(whatToOrder[i].prod.special_price === null ? whatToOrder[i].prod.price : whatToOrder[i].prod.special_price) * Number(whatToOrder[i].quantity);
     }
-
     $('.totPrice').remove();
     if (whatToOrder.length !== 0)
         $('.modal-total').append($(`<div class="totPrice">`).text("Total: " + $totalPrice + " hrn."));
@@ -96,11 +96,12 @@ $(document).on('click', '.back-btn', function () {
 $(document).on('click', '.btn-plus', function () {
     let product_id = ($(this).attr('id'));
     let $quan = 0;
-    for (let i in whatToOrder)
+    for (let i in whatToOrder) {
         if (whatToOrder[i].prod.id === product_id) {
             whatToOrder[i].quantity += 1;
             $quan = whatToOrder[i].quantity;
         }
+    }
     let $that = '.reduce_produce_' + product_id;
     $($that).find('.quantity').text($quan);
     countProducts();
@@ -112,7 +113,7 @@ $(document).on('click', '.btn-plus', function () {
 $(document).on('click', '.btn-min', function () {
     let product_id = ($(this).attr('id'));
     let $quan = 0;
-    for (let i in whatToOrder)
+    for (let i in whatToOrder) {
         if (whatToOrder[i].prod.id === product_id) {
             whatToOrder[i].quantity -= 1;
             if (whatToOrder[i].quantity === 0) {
@@ -125,6 +126,7 @@ $(document).on('click', '.btn-min', function () {
             }
             $quan = whatToOrder[i].quantity;
         }
+    }
     let $that = '.reduce_produce_' + product_id;
     $($that).find('.quantity').text($quan);
     countProducts();
@@ -136,13 +138,14 @@ $(document).on('click', '.btn-min', function () {
 $(document).on('click', '.btn-del', function () {
     $(this).closest('.row').remove();
     let product_id = ($(this).attr('id'));
-    for (let i in whatToOrder)
+    for (let i in whatToOrder) {
         if (whatToOrder[i].prod.id === product_id)
             whatToOrder.splice(i, 1);
-    countProducts();
-    if (whatToOrder.length === 0) {
-        _emptyModalData._emptyModalData();
-        cartInits._emptyInitCart();
+        countProducts();
+        if (whatToOrder.length === 0) {
+            _emptyModalData._emptyModalData();
+            cartInits._emptyInitCart();
+        }
     }
     countTotalSum();
     updateLocalCart();

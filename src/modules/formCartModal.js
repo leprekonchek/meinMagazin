@@ -20,7 +20,7 @@ let _fillCartModal = ({
         $quantity.append($(`<button type="button" class="btn btn-min plus-minus btn-sm" id="${prod.id}">-</button>`));
         $quantity.append($('<span class="quantity">').text(quantity));
         $quantity.append($(`<button type="button" class="btn btn-plus plus-minus btn-sm" id="${prod.id}">+</button>`));
-        $quantity.append($(`<button type="button" class="btn btn-del closeIt btn-sm col-md-3" id="${prod.id}">×</button>`));
+        $quantity.append($(`<button type="button" class="btn btn-del closeIt btn-sm" id="${prod.id}">×</button>`));
         $row.append($quantity);
         $row.append(`<br>`);
         $(`<div class="container" id="myCont"></div>`).appendTo('.modal-body');

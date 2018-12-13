@@ -58,4 +58,3 @@ $(document).on('click', '.dropdown-item', function () {
 });
 
 cartInits.initCart();
-cartInits.countProducts();
