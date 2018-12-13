@@ -91,9 +91,10 @@ img {
   float: right;
 }
 
-.itemsInCart{
+.itemsInCart {
   color: white;
 }
+
 .footer {
   bottom: 0;
   width: 100%;
@@ -126,12 +127,16 @@ img {
 }
 
 .plus-minus:hover {
-  background-color: gold;
-  color: blanchedalmond;
+  background-color: lightseagreen;
+  color: white;
 }
 
 .row {
   margin: 5px 0;
+}
+
+.totPrice {
+  padding: 10px;
 }
 
 .check {
@@ -152,4 +157,7 @@ img {
 .back-btn:hover {
   background-color: plum;
   color: ghostwhite;
+}
+.success_order{
+  color: palevioletred;
 }

@@ -99,11 +99,14 @@ img {
   margin: 0 5px; }
 
 .plus-minus:hover {
-  background-color: gold;
-  color: blanchedalmond; }
+  background-color: lightseagreen;
+  color: white; }
 
 .row {
   margin: 5px 0; }
+
+.totPrice {
+  padding: 10px; }
 
 .check {
   background-color: transparent;
@@ -120,4 +123,7 @@ img {
 .back-btn:hover {
   background-color: plum;
   color: ghostwhite; }
+
+.success_order {
+  color: palevioletred; }
 

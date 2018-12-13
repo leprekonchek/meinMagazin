@@ -4,7 +4,7 @@ let $totalPrice = 0;
 
 let _emptyModalData = require('./empty');
 
-function initCart(){
+function initCart() {
     if (localStorage.getItem("cart") != null) {
         whatToOrder = JSON.parse(localStorage.getItem("cart"));
     }
@@ -12,7 +12,22 @@ function initCart(){
 
 function countProducts() {
     $('.itemsInCart').empty();
-    $('.itemsInCart').append(`<span>`).text(whatToOrder.length);
+    let $count = 0;
+    for (let i in whatToOrder) {
+        $count += whatToOrder[i].quantity;
+    }
+    $('.itemsInCart').text($count);
+}
+
+function countTotalSum() {
+    $totalPrice = 0;
+    for (let i in whatToOrder) {
+        $totalPrice += Number(whatToOrder[i].prod.special_price === null ? whatToOrder[i].prod.price : whatToOrder[i].prod.special_price) * Number(whatToOrder[i].quantity);
+    }
+
+    $('.totPrice').remove();
+    if (whatToOrder.length !== 0)
+        $('.modal-total').append($(`<div class="totPrice">`).text("Total: " + $totalPrice + " hrn."));
 }
 
 function updateLocalCart() {
@@ -27,9 +42,8 @@ function fillCart() {
         whatToOrder.forEach(order => {
             cartInits._fillCartModal(order);
         });
-        $totalPrice = cartInits.$totalSum;
-        $('.modal-body').append($(`<div>`).text("Total: " + $totalPrice + " hrn."));
         $('.modal-footer').append($(`<button type="button" class="btn ml-auto check" data-toggle="#myModal" data-target="#myModal">CHECK OUT</button>`));
+        countTotalSum();
         countProducts();
     }
     updateLocalCart();
@@ -80,24 +94,57 @@ $(document).on('click', '.back-btn', function () {
 
 //when we click on plus button
 $(document).on('click', '.btn-plus', function () {
-    let $count = $(this).closest('.quantity');
-    //$(this).parent.replaceChild('.quantity', $count + 1);
+    let product_id = ($(this).attr('id'));
+    let $quan = 0;
+    for (let i in whatToOrder)
+        if (whatToOrder[i].prod.id === product_id) {
+            whatToOrder[i].quantity += 1;
+            $quan = whatToOrder[i].quantity;
+        }
+    let $that = '.reduce_produce_' + product_id;
+    $($that).find('.quantity').text($quan);
+    countProducts();
+    countTotalSum();
+    updateLocalCart();
 });
 
 //when we click on minus button
 $(document).on('click', '.btn-min', function () {
-
+    let product_id = ($(this).attr('id'));
+    let $quan = 0;
+    for (let i in whatToOrder)
+        if (whatToOrder[i].prod.id === product_id) {
+            whatToOrder[i].quantity -= 1;
+            if (whatToOrder[i].quantity === 0) {
+                $(this).closest('.row').remove();
+                whatToOrder.splice(i, 1);
+                if (whatToOrder.length === 0) {
+                    _emptyModalData._emptyModalData();
+                    cartInits._emptyInitCart();
+                }
+            }
+            $quan = whatToOrder[i].quantity;
+        }
+    let $that = '.reduce_produce_' + product_id;
+    $($that).find('.quantity').text($quan);
+    countProducts();
+    countTotalSum();
+    updateLocalCart();
 });
 
 //when we click on remove button
 $(document).on('click', '.btn-del', function () {
     $(this).closest('.row').remove();
-    whatToOrder.splice(whatToOrder.indexOf(($(this).attr('id'))), 1);
+    let product_id = ($(this).attr('id'));
+    for (let i in whatToOrder)
+        if (whatToOrder[i].prod.id === product_id)
+            whatToOrder.splice(i, 1);
     countProducts();
     if (whatToOrder.length === 0) {
         _emptyModalData._emptyModalData();
         cartInits._emptyInitCart();
     }
+    countTotalSum();
     updateLocalCart();
 });
 
@@ -115,25 +162,21 @@ $(document).on('click', '.btn-finally-order', function () {
     whatToOrder.forEach(order => {
         $data[`products[${order.prod.id}]`] = order.quantity;
     });
-    $.post('https://nit.tron.net.ua/api/order/add',
-        {
-            token: 'GO2BUP8afCBLq-InINzE',
-            name: $name,
-            phone: $tel,
-            email: $email,
-        },
-        function (json, status) {
-            if (json.status === 'success') {
-                console.log(json);
-                console.log('Success');
-                whatToOrder.length = 0;
-                localStorage.removeItem("cart");
-                _emptyModalData._emptyModalData();
-                cartInits._sucessOrder();
-            } else {
-                console.log('Error, try again!' + status + json);
+
+    $.post('https://nit.tron.net.ua/api/order/add', $data, json => {
+        if (json.status === 'success') {
+            whatToOrder.length = 0;
+            localStorage.removeItem("cart");
+            countTotalSum();
+            _emptyModalData._emptyModalData();
+            cartInits._successOrder();
+        } else {
+            $('.errors_here').empty().append($(`<span class="price_discount">ERROR</span>`));
+            for (let i in json.errors) {
+                json.errors[i].forEach(err => $('.errors_here').append($(`<span class="d-block my-2">`).text(err)));
             }
-        });
+        }
+    });
 });
 
 module.exports = {initCart, countProducts};
