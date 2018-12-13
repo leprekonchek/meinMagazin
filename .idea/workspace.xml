@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34bca3fd-a24c-40ff-bad4-3e140f92d727" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/whoWeAre.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/whoWeAre.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -62,7 +59,7 @@
           <entry key="css" value="30" />
           <entry key="gitignore" value="14" />
           <entry key="html" value="2407" />
-          <entry key="js" value="16479" />
+          <entry key="js" value="16500" />
           <entry key="json" value="53" />
           <entry key="scss" value="2055" />
         </counts>
@@ -72,7 +69,7 @@
           <entry key="CSS" value="30" />
           <entry key="HTML" value="2424" />
           <entry key="JSON" value="53" />
-          <entry key="JavaScript" value="16462" />
+          <entry key="JavaScript" value="16483" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="SCSS" value="2055" />
         </counts>
@@ -138,20 +135,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/whoWeAre.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="136">
+              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
+            <state relative-caret-position="259">
+              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -204,8 +201,8 @@
         <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/docs/index.html" />
-        <option value="$PROJECT_DIR$/src/modules/whoWeAre.js" />
         <option value="$PROJECT_DIR$/src/modules/cart.js" />
+        <option value="$PROJECT_DIR$/src/modules/whoWeAre.js" />
       </list>
     </option>
   </component>
@@ -337,17 +334,18 @@
       <workItem from="1543829719319" duration="219000" />
       <workItem from="1543837273699" duration="810000" />
       <workItem from="1543943437855" duration="64915000" />
-      <workItem from="1544569089512" duration="33637000" />
+      <workItem from="1544569089512" duration="34012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241163000" />
+    <option name="totallyTimeSpent" value="241538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1633888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1633888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5012225" side_tool="true" weight="0.15848215" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -364,7 +362,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" sideWeight="0.49702382" side_tool="true" visible="true" weight="0.29425114" />
+      <window_info anchor="right" id="Terminal" order="3" sideWeight="0.49702382" side_tool="true" visible="true" weight="0.29425114" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1633888" />
@@ -519,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/whoWeAre.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/formCartModal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-186">
@@ -535,8 +526,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
+        <state relative-caret-position="259">
+          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/whoWeAre.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
         </state>
       </provider>
     </entry>
