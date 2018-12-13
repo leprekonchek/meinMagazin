@@ -100,6 +100,7 @@ $(document).on('click', '.btn-plus', function () {
         if (whatToOrder[i].prod.id === product_id) {
             whatToOrder[i].quantity += 1;
             $quan = whatToOrder[i].quantity;
+            countTotalSum();
         }
     }
     let $that = '.reduce_produce_' + product_id;
@@ -112,23 +113,24 @@ $(document).on('click', '.btn-plus', function () {
 //when we click on minus button
 $(document).on('click', '.btn-min', function () {
     let product_id = ($(this).attr('id'));
-    let $quan = 0;
     for (let i in whatToOrder) {
         if (whatToOrder[i].prod.id === product_id) {
             whatToOrder[i].quantity -= 1;
+            let $that = '.reduce_produce_' + product_id;
+            $($that).find('.quantity').text(whatToOrder[i].quantity);
             if (whatToOrder[i].quantity === 0) {
                 $(this).closest('.row').remove();
                 whatToOrder.splice(i, 1);
                 if (whatToOrder.length === 0) {
                     _emptyModalData._emptyModalData();
                     cartInits._emptyInitCart();
+                    countProducts();
+                    countTotalSum();
                 }
             }
-            $quan = whatToOrder[i].quantity;
+            break;
         }
     }
-    let $that = '.reduce_produce_' + product_id;
-    $($that).find('.quantity').text($quan);
     countProducts();
     countTotalSum();
     updateLocalCart();
